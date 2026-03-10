@@ -1,0 +1,372 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    margin: 0;
+    font-family: Poppins;
+
+    background: linear-gradient(#87CEEB, #bdeaff);
+
+    text-align: center;
+
+    min-height: 100vh;
+    overflow-y: auto;
+    padding-bottom: 120px;
+
+}
+
+
+
+.navbar {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px 60px;
+
+    background: rgba(0, 0, 0, 0.25);
+
+    color: white;
+
+}
+
+.logo {
+
+    font-size: 24px;
+    font-weight: bold;
+
+}
+
+.nav-links {
+
+    list-style: none;
+    display: flex;
+    gap: 30px;
+
+}
+
+.nav-links a {
+
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+
+}
+
+.nav-links a:hover {
+
+    color: #ffd700;
+
+}
+
+
+
+.cloud {
+
+    position: absolute;
+
+    background: white;
+
+    width: 160px;
+    height: 60px;
+
+    border-radius: 60% 40% 55% 45% / 50% 60% 40% 50%;
+
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+
+    z-index: 0;
+
+}
+
+.cloud1 {
+
+    top: 110px;
+    left: 100px;
+
+}
+
+.cloud2 {
+
+    top: 160px;
+    left: 450px;
+
+}
+
+.cloud3 {
+
+    top: 110px;
+    right: 150px;
+
+}
+
+
+
+.title {
+
+    font-size: 80px;
+
+    margin-top: 120px;
+
+    margin-bottom: 40px;
+
+    color: black;
+
+    position: relative;
+    z-index: 5;
+
+}
+
+
+
+.leaderboard-header {
+
+    width: 85%;
+
+    margin: auto;
+
+    background: black;
+
+    color: white;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    padding: 20px 40px;
+
+    font-size: 22px;
+
+    border-radius: 10px;
+
+    text-align: center;
+
+}
+
+
+
+.player {
+
+    width: 85%;
+
+    margin: 15px auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 20px 40px;
+
+    border-radius: 14px;
+
+    color: white;
+
+    font-size: 22px;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+
+    transition: 0.25s;
+
+}
+
+
+
+.player:hover {
+
+    transform: translateY(-3px) scale(1.02);
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+
+}
+
+
+
+
+
+.rank1 {
+
+    background: linear-gradient(90deg, #FFD700, #FFC300);
+
+    color: #000;
+
+}
+
+
+
+.rank2 {
+
+    background: linear-gradient(90deg, #C0C0C0, #E5E5E5);
+
+    color: #000;
+
+}
+
+
+
+.rank3 {
+
+    background: linear-gradient(90deg, #CD7F32, #B87333);
+
+    color: white;
+
+}
+
+
+
+.rankNormal {
+
+    background: rgba(0, 0, 0, 0.35);
+
+}
+
+
+
+.grass {
+
+    position: fixed;
+
+    bottom: 40px;
+
+    height: 40px;
+    width: 100%;
+
+    background: #32cd32;
+
+    left: 0;
+
+}
+
+.soil {
+
+    position: fixed;
+
+    bottom: 0;
+
+    height: 40px;
+    width: 100%;
+
+    background: #8b4513;
+
+    left: 0;
+
+}
+
+
+
+@media (max-width:768px) {
+
+    .navbar {
+        padding: 15px 30px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .nav-links {
+        gap: 20px;
+    }
+
+    .nav-links a {
+        font-size: 16px;
+    }
+
+    .title {
+        font-size: 50px;
+        margin-top: 100px;
+    }
+
+    .leaderboard-header {
+
+        width: 92%;
+        padding: 15px 30px;
+        font-size: 18px;
+
+    }
+
+    .player {
+
+        width: 92%;
+        padding: 18px 30px;
+        font-size: 18px;
+
+    }
+
+    .cloud {
+        width: 120px;
+        height: 45px;
+    }
+
+    .cloud1 {
+        left: 30px;
+    }
+
+    .cloud2 {
+        left: 200px;
+    }
+
+    .cloud3 {
+        right: 30px;
+    }
+
+}
+
+
+
+@media (max-width:480px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px 20px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .title {
+        font-size: 34px;
+        margin-top: 90px;
+    }
+
+    .leaderboard-header {
+        font-size: 14px;
+        padding: 12px 15px;
+    }
+
+    .player {
+        font-size: 14px;
+        padding: 14px 15px;
+    }
+
+    .cloud {
+        width: 90px;
+        height: 35px;
+    }
+
+    .cloud1 {
+        left: 10px;
+        top: 80px;
+    }
+
+    .cloud2 {
+        left: 120px;
+        top: 120px;
+    }
+
+    .cloud3 {
+        display: none;
+    }
+
+}

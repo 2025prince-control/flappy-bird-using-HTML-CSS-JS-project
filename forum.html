@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flappy Bird Forum</title>
+
+    <link rel="stylesheet" href="forum.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="logo">Flappy Bird</div>
+
+        <ul class="nav-links">
+
+            <li><a href="index.html">Home</a></li>
+            <li><a href="flappybird.html">Play</a></li>
+            <li><a href="leaderboard.html">Leaderboard</a></li>
+            <li><a href="forum.html">Forum</a></li>
+
+        </ul>
+
+    </nav>
+
+    <div class="cloud cloud1"></div>
+    <div class="cloud cloud2"></div>
+
+
+    <h1 class="title">Community Forum</h1>
+
+    <div class="forum-container">
+
+        <div class="comment-box">
+
+            <input type="text" id="username" placeholder="Your name">
+
+            <textarea id="commentText" placeholder="Write something about the game..."></textarea>
+
+            <button id="postBtn">Post Comment</button>
+
+        </div>
+        <div id="comments"></div>
+    </div>
+    <div class="grass"></div>
+    <div class="soil"></div>
+
+
+    <script src="forum.js"></script>
+
+</body>
+
+</html>

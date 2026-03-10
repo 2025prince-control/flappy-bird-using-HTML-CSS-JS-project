@@ -1,0 +1,307 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+.navbar {
+    width: 100%;
+    height: 80px;
+    padding: 0 60px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    background-color: #4FACED;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.logo {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 14px;
+    color: #ffffff;
+    line-height: 1.5;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    opacity: 0.7;
+    color: yellow;
+}
+
+
+
+.hero {
+    position: relative;
+    height: calc(100vh - 80px);
+
+    background: linear-gradient(to bottom, #87D6F7 0%, #CFF3FF 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+
+.cloud {
+    position: absolute;
+    width: 220px;
+    height: 80px;
+    background: #ffffff;
+    border-radius: 50px;
+    opacity: 0.95;
+}
+
+.cloud::before,
+.cloud::after {
+    content: "";
+    position: absolute;
+    background: #ffffff;
+    border-radius: 50%;
+}
+
+.cloud::before {
+    width: 100px;
+    height: 100px;
+    top: -50px;
+    left: 40px;
+}
+
+.cloud::after {
+    width: 120px;
+    height: 120px;
+    top: -60px;
+    right: 30px;
+}
+
+.cloud-left {
+    top: 120px;
+    left: 120px;
+}
+
+.cloud-right {
+    top: 100px;
+    right: 150px;
+}
+
+
+
+.hero-content h1 {
+    font-family: 'Press Start 2P', cursive;
+
+    font-size: clamp(28px, 6vw, 48px);
+
+    color: #ffffff;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    color: #444;
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+
+
+.play-btn {
+    background: linear-gradient(to right, #22C55E, #16A34A);
+    border: none;
+    padding: 15px 50px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.play-btn:hover {
+    transform: scale(1.05);
+}
+
+
+
+.grass {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    height: 40px;
+    background-color: #7AC943;
+}
+
+.soil {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 20px;
+    background: #C15A00;
+}
+
+
+
+.side-bird {
+    position: absolute;
+    width: 170px;
+    opacity: 0.9;
+    pointer-events: none;
+}
+
+.bird-left {
+    left: 120px;
+    top: 55%;
+    transform: translateY(-50%) rotate(-20deg);
+}
+
+.bird-right {
+    right: 120px;
+    top: 55%;
+    transform: translateY(-50%) rotate(20deg) scaleX(-1);
+}
+
+
+
+@media (max-width:768px) {
+
+    .navbar {
+        padding: 0 20px;
+        height: 70px;
+    }
+
+    .logo {
+        font-size: 10px;
+    }
+
+    .nav-links {
+        gap: 18px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+   
+
+    .hero-content h1 {
+        font-size: 30px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+    }
+
+   
+
+    .play-btn {
+        padding: 12px 30px;
+        font-size: 14px;
+    }
+
+   
+
+    .cloud {
+        width: 140px;
+        height: 50px;
+    }
+
+    .cloud::before {
+        width: 60px;
+        height: 60px;
+        top: -25px;
+        left: 20px;
+    }
+
+    .cloud::after {
+        width: 70px;
+        height: 70px;
+        top: -30px;
+        right: 15px;
+    }
+
+    .cloud-left {
+        top: 90px;
+        left: 30px;
+    }
+
+    .cloud-right {
+        top: 80px;
+        right: 30px;
+    }
+
+   
+
+    .side-bird {
+        width: 100px;
+    }
+
+    .bird-left {
+        left: 20px;
+        top: 60%;
+    }
+
+    .bird-right {
+        right: 20px;
+        top: 60%;
+    }
+
+}
+
+
+
+@media (max-width:480px) {
+
+    .hero-content h1 {
+        font-size: 22px;
+    }
+
+    .play-btn {
+        padding: 10px 25px;
+        font-size: 13px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+   
+
+    .side-bird {
+        display: none;
+    }
+
+}
